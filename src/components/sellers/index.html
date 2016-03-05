@@ -21,13 +21,13 @@
 	<div id="section">
 		<ul class="Sellers">
 			<li ng-repeat="seller in sellerInfo">
-				<a href ng-click="moveToSeller(seller.name)"> {{seller.name}} </a>
+				<a href="#/seller" ng-click="enterSeller()"> {{seller.name}} </a>
 			</li>
 		</ul>
 
 		<ul class="Category">
 			<li ng-repeat="seller in sellerInfo">
-				<a href ng-click="moveToSeller(seller.category)"> {{seller.category}} </a>
+				<a href ng-click="enterCategory()"> {{seller.category}} </a>
 			</li>
 		</ul>
 	</div>
