@@ -1,22 +1,35 @@
 <div>
 	<div id="header">
-  		<h1>Söluaðilar</h1>
+  		<h2>Söluaðilar</h2>
   	</div>
-  	<div id="section">
-	   <div class="ModalButton">
-	    	<!-- Trigger the modal with a button --> 
-	    	<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
-	    	<button type="button" class="btn btn-default btn-lg" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal">Bæta við seljanda</button>
-		</div>
 
-	  <div>
-	      <h2>Nafn seljanda:</h2>
-	      <ul>
-	        <li ng-repeat="seller in sellerInfo">
-	          <a href ng-click="moveToSeller(seller.name)"> {{seller.name}} </a>
-	        </li>
-	      </ul>
-	    </div>
+	<div class="ModalButton">
+		<!-- Trigger the modal with a button --> 
+		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+		<button type="button" class="btn btn-default" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal">Bæta við seljanda</button>
+	</div>
+
+	<div id="nav">
+		<div class="SellerName">
+		    Nafn seljanda:
+		</div>
+		<div class="SellerCategory">
+			Flokkur:
+		</div>
+	</div>
+
+	<div id="section">
+		<ul class="Sellers">
+			<li ng-repeat="seller in sellerInfo">
+				<a href ng-click="moveToSeller(seller.name)"> {{seller.name}} </a>
+			</li>
+		</ul>
+
+		<ul class="Category">
+			<li ng-repeat="seller in sellerInfo">
+				<a href ng-click="moveToSeller(seller.category)"> {{seller.category}} </a>
+			</li>
+		</ul>
 	</div>
 
  </div>
