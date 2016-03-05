@@ -1,1 +1,22 @@
-<div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
+<div>
+	<div id="header">
+  		<h1>Söluaðilar</h1>
+  	</div>
+  	<div id="section">
+	   <div class="ModalButton">
+	    	<!-- Trigger the modal with a button --> 
+	    	<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+	    	<button type="button" class="btn btn-default btn-lg" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal">Bæta við seljanda</button>
+		</div>
+
+	  <div>
+	      <h2>Nafn seljanda:</h2>
+	      <ul>
+	        <li ng-repeat="seller in sellerInfo">
+	          <a href ng-click="moveToSeller(seller.name)"> {{seller.name}} </a>
+	        </li>
+	      </ul>
+	    </div>
+	</div>
+
+ </div>
