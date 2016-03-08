@@ -1,55 +1,46 @@
 
 .Sellers {
-	margin: 0;
-	padding-left: 0;
-	padding-right: 9%;
-	display: inline;
-	float: left;
-	list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 9%;
+  display: inline;
+  float: left;
+  list-style-type: none;
 }
-
 .Category {
-	margin: 0;
-	padding: 0;
-	display: inline;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  list-style-type: none;
 }
-
-
 .ModalButton {
-	font-size: 18px;
-    border: none;
-    color: white;
-    text-align: right;
-    padding-top: 80px;
-    padding-right: 50%; 
+  font-size: 18px;
+  border: none;
+  color: white;
+  text-align: right;
+  padding-top: 80px;
+  padding-right: 50%;
 }
-
 #header {
-	float:left;
+  float: left;
 }
-
-#nav{
-	width: 100%;
+#nav {
+  width: 100%;
 }
-
-.SellerName{
-	font-size: 18px;
-	margin: 0;
-	padding: 0;
-	display: inline;
-	float: left;
+.SellerName {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: left;
 }
-
-.SellerCategory{
-	font-size: 18px;
-	margin: 0;
-	padding: 15%;
-	display: inline;
+.SellerCategory {
+  font-size: 18px;
+  margin: 0;
+  padding: 15%;
+  display: inline;
 }
-
-
 #section {
-	width: 100%;
-    float:left;
+  width: 100%;
+  float: left;
 }
