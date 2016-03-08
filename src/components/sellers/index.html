@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="SellersController">
 	<div id="header">
   		<h2>Söluaðilar</h2>
   	</div>
@@ -21,7 +21,7 @@
 	<div id="section">
 		<ul class="Sellers">
 			<li ng-repeat="seller in sellerInfo">
-				<a href ng-click="enterSeller(seller.id)"> {{seller.name}} </a>
+				<a href ng-click="enterSeller(seller.id)" ng-href="#/seller/{{seller.id}}"> {{seller.name}} </a>
 			</li>
 		</ul>
 

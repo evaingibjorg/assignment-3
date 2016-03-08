@@ -3,8 +3,11 @@
 angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 .config(function ($routeProvider) {
 	$routeProvider.when("/", {
-		controller: "SellersController",
-		templateUrl: "components/sellers/index.html"
+		templateUrl: "components/sellers/index.html",
+		controller: "SellersController"
+	}).when("/seller/:sellerID", {
+		templateUrl: "components/sellers/seller.html",
+		controller: "SellersIdController"
 	});
 });
 
@@ -250,6 +253,8 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 		$location.path("/seller/" + sellerID);		
 	};
 });
+"use strict";
+
 "use strict";
 
 /**
