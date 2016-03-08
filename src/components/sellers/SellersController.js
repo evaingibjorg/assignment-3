@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, $uibModal, $location) {
+function SellersController($scope, AppResource, $routeParams, $uibModal, $location) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
@@ -17,6 +17,7 @@ function SellersController($scope, AppResource, $uibModal, $location) {
 			console.log(seller);
 			var sellerSet =
 			{
+			id: seller.sellerID,
 			name: seller.sellerName,
 			category: seller.sellerCategory,
 			imagePath: seller.sellerimagePath
@@ -37,7 +38,7 @@ function SellersController($scope, AppResource, $uibModal, $location) {
 
 	}); 
 
-	$scope.enterSeller = function() {
-		$location.path("/seller");		
+	$scope.enterSeller = function(sellerID) {
+		$location.path("/seller/" + sellerID);		
 	};
 });

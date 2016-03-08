@@ -21,7 +21,7 @@
 	<div id="section">
 		<ul class="Sellers">
 			<li ng-repeat="seller in sellerInfo">
-				<a href="#/seller" ng-click="enterSeller()"> {{seller.name}} </a>
+				<a href ng-click="enterSeller(seller.id)"> {{seller.name}} </a>
 			</li>
 		</ul>
 
