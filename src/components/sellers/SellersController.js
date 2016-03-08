@@ -17,17 +17,16 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 			console.log(seller);
 			var sellerSet =
 			{
-			id: seller.sellerID,
 			name: seller.sellerName,
 			category: seller.sellerCategory,
 			imagePath: seller.sellerimagePath
 			};
 		AppResource.addSeller(sellerSet).success(function (seller){
+			var newSeller = seller;
 
-		}, function () {
-			console.log('dismissed');
-		}
-	);
+		}).error(function () {
+			//centrisNotify.error("");
+		});
     });
 	};
 
