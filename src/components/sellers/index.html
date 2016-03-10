@@ -1,5 +1,7 @@
 <div ng-include="'src/components/translate/languageBar.html'"></div>
-<div ng-controller="SellersController">
+	<div ng-show="isLoading">
+	  		<loading-message></loading-message>
+	</div>
 	<div id="header">
   		<h2 translate = "sellers.Title"></h2>
   	</div>
@@ -33,4 +35,4 @@
 			</li>
 		</ul>
 	</div>
- </div>
+ 
