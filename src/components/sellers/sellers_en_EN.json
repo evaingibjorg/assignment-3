@@ -2,7 +2,8 @@
 	"sellers" : {
 		"Title":                     "Sellers List",
 		"Name":                      "Name",
-		"Category":					"Category",
+		"Category":					 "Category",
+		"AddIndividual":             "Add Individual",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
