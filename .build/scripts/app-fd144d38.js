@@ -266,6 +266,14 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 });
 "use strict";
 
+angular.module("project3App").controller("language_controller",
+	function LanguageController($translate, $scope) {
+		$scope.changeLanguage = function (langKey) {
+			$translate.use(langKey);
+		};
+});
+"use strict";
+
 /**
  * @ngdoc service
  * @name general.centrisNotify
