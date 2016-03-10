@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, $routeParams, $uibModal, $location, $translate) {
+function SellersController($scope, AppResource, $routeParams, $uibModal, $location, $translate, $rootScope, centrisNotify, SellerDlg) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
@@ -25,23 +25,34 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 			var newSeller = seller;
 
 		}).error(function () {
-			//centrisNotify.error("");
+			centrisNotify.error("sellers.Messages.SaveFailed");
 		});
     });
 	};
 
+	/*$scope.onAddSeller = function onAddSeller() {
+			var sellerSet = {};
+			SellerDlg.show(sellerSet).then(function(seller) {
+				AppResource.addSeller(seller).success(function(sellerInfo) {
+					centrisNotify.success('sellers.Messages.SaveSucceeded');
+				}).error(function() {
+					centrisNotify.error('sellers.Messages.SaveFailed');
+			});
+		});
+	};
+*/
+	$scope.isLoading = true;
 	var gettingSellers = AppResource.getSellers();
 	gettingSellers.success(function (sellerInfo) {
 	$scope.sellerInfo = sellerInfo;
 	console.log($scope.sellerInfo);
-
-	}); 
+	}).error(function(){
+		$scope.isLoading = false;
+		centrisNotify.error('sellers.Messages.LoadFailed');
+	});
 
 	$scope.enterSeller = function(sellerID) {
-		$location.path("/seller/" + sellerID);		
+		$location.path("/seller/" + sellerID);	
 	};
 
-	$scope.translateText = function(key) {
-		$translate.use(key);
-	};
 });

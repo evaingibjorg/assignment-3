@@ -1,10 +1,11 @@
 <div ng-include="'src/components/translate/languageBar.html'"></div>
-<div ng-controller"SellersDetailsController">
 	<div id="header">
 		<div class="SellerPhoto" translate="sellerdetails.Photo">
 		</div>
 		<div class="SellerName" translate="sellerdetails.Name">
 		</div>
+			{{seller.name}}
+			<img ng-src="{{seller.imagePath}}"/>
 		<div class="SellerCategory" translate="sellerdetails.Category">
 		</div>
 	</div>
@@ -24,4 +25,3 @@
 		</div>
 	</div>
  </div>
-</div>
