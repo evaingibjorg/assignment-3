@@ -5,12 +5,12 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
-	//Code help from http://mag5323.logdown.com/posts/245841-angularjs-modal-result-then
+	//Code help from https://angular-ui.github.io/bootstrap/
 
 	$scope.addSellerModal = function() {
 	  var modalInstance = $uibModal.open({
-	  controller: 'ModalController',
       templateUrl: 'src/components/sellers/modal.html',
+      controller: 'ModalController',
     });
 
     modalInstance.result.then(function (seller) {
