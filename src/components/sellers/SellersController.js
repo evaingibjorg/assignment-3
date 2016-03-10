@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, $routeParams, $uibModal, $location) {
+function SellersController($scope, AppResource, $routeParams, $uibModal, $location, $translate) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 
@@ -39,5 +39,9 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 
 	$scope.enterSeller = function(sellerID) {
 		$location.path("/seller/" + sellerID);		
+	};
+
+	$scope.translateText = function(key) {
+		$translate.use(key);
 	};
 });
