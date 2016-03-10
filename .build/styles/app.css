@@ -17,9 +17,7 @@
   font-size: 18px;
   border: none;
   color: white;
-  text-align: right;
-  padding-top: 80px;
-  padding-right: 50%;
+  float: right;
 }
 #header {
   float: left;
@@ -32,13 +30,16 @@
   margin: 0;
   padding: 0;
   display: inline;
-  float: left;
 }
 .SellerCategory {
   font-size: 18px;
   margin: 0;
-  padding: 15%;
+  padding-left: 15%;
   display: inline;
+}
+#right {
+  padding-right: 50%;
+  padding-top: 5%;
 }
 #section {
   width: 100%;
