@@ -1,4 +1,29 @@
 <div ng-controller"SellersIdController">
-<p>Upplýsingar um seljendur</p>
+	<div id="header">
+		<div class="SellerPhoto" translate="seller.Photo">
+		</div>
+		<div class="SellerName" translate="seller.Name">
+		</div>
+		<div class="SellerCategory" translate="seller.Category">
+		</div>
+	</div>
 
+	<div id="nav">
+		<div class="AllProducts" translate="seller.AllProducts">
+		</div>
+		<div class="TopTen" translate="seller.TopTen">
+		</div>
+	</div>
+
+  	<div id="right">
+  		<div class="ModalButton">
+		<!-- Trigger the modal with a button --> 
+		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+		<button type="button" class="btn btn-default" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal">Bæta við seljanda</button>
+		</div>
+	</div>
+	
+
+
+ </div>
 </div>
