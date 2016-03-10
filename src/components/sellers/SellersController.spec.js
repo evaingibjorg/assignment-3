@@ -1,5 +1,7 @@
 "use strict";
 
-describe("SellersController should be unit tested here", function() {
-	// TODO: add beforeEach/describe/it/etc. functions as appropriate!
+describe("SellersController unit tests", function() {
+	it("should be correctly blaaa", function(){
+		expect(result).
+	});
 });
