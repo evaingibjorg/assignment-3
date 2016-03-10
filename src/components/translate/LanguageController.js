@@ -3,6 +3,6 @@
 angular.module("project3App").controller("LanguageController",
 	function LanguageController($translate, $scope) {
 		$scope.changeLanguage = function (langKey) {
-			$translateProvider.preferredLanguage('is');
+			//$translateProvider.use('is');
 		};
 });
