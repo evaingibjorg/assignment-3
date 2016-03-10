@@ -7,7 +7,7 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		controller: "SellersController"
 	}).when("/seller/:sellerID", {
 		templateUrl: "components/seller-details/seller.html",
-		controller: "SellersIdController"
+		controller: "SellersController"
 	});
 
 	$translateProvider.fallbackLanguage('en');
