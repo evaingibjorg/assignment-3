@@ -2,11 +2,12 @@
 	"sellerdetails" : {
 		"Title":                     "Seljendur",
 		"Name":                      "Nafn",
-		"Category":					"Flokkur",
-		"Photo":					"Mynd",
-		"AllProducts":				"Allar vörur",
-		"TopTen":					"Topp Tíu",
-		"AddProduct":				"Bæta við vöru",
+		"Category":					 "Flokkur",
+		"Photo":					 "Mynd",
+		"AllProducts":				 "Allar vörur",
+		"TopTen":					 "Topp Tíu",
+		"AddProduct":				 "Bæta við vöru",
+		"Back":						 "Til baka",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",

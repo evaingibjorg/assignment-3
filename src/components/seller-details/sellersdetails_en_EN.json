@@ -7,6 +7,7 @@
 		"AllProducts":				"All Products",
 		"TopTen":					"Top Ten",
 		"AddProduct":				 "Add Product",
+		"Back":						 "Back",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

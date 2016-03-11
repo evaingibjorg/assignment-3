@@ -10,4 +10,9 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
     $scope.seller = sellers;
     console.log(sellers);
   });
+
+  $scope.back = function back(){
+		$location.path("/");
+	};
+
 });
