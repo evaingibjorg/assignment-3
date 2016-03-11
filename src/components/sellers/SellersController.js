@@ -41,6 +41,7 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 		});
 	};
 */
+
 	$scope.isLoading = true;
 	var gettingSellers = AppResource.getSellers();
 	gettingSellers.success(function (sellerInfo) {
@@ -55,4 +56,26 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 		$location.path("/seller/" + sellerID);	
 	};
 
+	$scope.editSeller = function(s) {
+		SellerDlg.show(s).then(function(seller) {
+			AppResource.updateSeller(s.id, seller).success(function (seller){
+					centrisNotify.success('sellers.Messages.EditSucceeded');
+			}).error(function() {
+					centrisNotify.success('sellers.Messages.EditFailed');
+			});
+		});
+	};
+
+/*
+		$scope.onEditSeller = function onEditSeller(s) {
+		SellerDlg.show(s).then(function(seller) {
+			AppResource.updateSeller(s.id, seller).success(function (seller){
+					centrisNotify.success('sellers.Messages.EditSucceeded');
+			}).error(function() {
+					centrisNotify.success('sellers.Messages.EditFailed');
+			});
+		});
+	};
+
+	}*/
 });
