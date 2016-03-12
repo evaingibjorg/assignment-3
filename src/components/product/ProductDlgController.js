@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("ProductDlgController",
-function ProductDlgController($scope, centrisNotify, modalParam) {
+function ProductDlgController($scope, AppResource, $routeParams, $uibModal, modalParam, $location, $translate, $rootScope, centrisNotify, SellerDlg ) {
 
   $scope.onCancel = function onCancel() {
     $scope.$dismiss();

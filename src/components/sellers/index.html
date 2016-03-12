@@ -15,14 +15,15 @@
                                                     
 		  <div class="table-responsive">          
 		  <table class="table">
-		    <thead>
-		      <tr>
-		        <th translate="sellers.Name">Name</th>
-		        <th translate="sellers.Category">Category</th>
+			 <thead>
+		      <tr table-sort="-Name">
+		        <th data-columnName="Name" translate="sellers.Name">Name</th>
+		        <th data-columnName="Category" translate="sellers.Category">Category</th>
 		      </tr>
 		    </thead>
+
 		    <tbody>
-		      <tr ng-repeat="seller in sellerInfo">
+		    	<tr ng-repeat="seller in sellerInfo | orderBy:predicate:reverse">
 		      	<td>
 		      		<button type="button" class="btn btn-default" ng-click="onEditSeller(seller)" data-toggle="modal" data-target="#myModal" translate="sellers.Edit">Breyta</button>
 		      	</td>

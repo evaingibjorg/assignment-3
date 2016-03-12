@@ -14,7 +14,6 @@ $scope.onAddProduct = function onAddProduct() {
 	});
 };	
 
-
  $scope.sellerID = $routeParams.sellerID ;
  console.log($scope.sellerID);
   AppResource.getSellerDetails(parseInt($scope.sellerID)).success(function(sellers) {
@@ -22,10 +21,15 @@ $scope.onAddProduct = function onAddProduct() {
     console.log(sellers);
   });
 
-  AppResource.getSellerProducts(parseInt($scope.sellerID)).success(function(products) {
+ var topTenProductSold = [];
+ AppResource.getSellerProducts(parseInt($scope.sellerID)).success(function(products) {
     $scope.products = products;
+    topTenProductSold = products;
     console.log(products);
   });
+
+topTenProductSold = _.sortBy(topTenProductSold, "quantitySold");
+$scope.topProducts = _.take(topTenProductSold, 10);
 
   $scope.back = function back(){
 		$location.path("/");
