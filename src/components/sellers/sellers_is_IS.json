@@ -1,8 +1,10 @@
 {
 	"sellers" : {
 		"Title":                     "Seljendur",
+		"TitleProduct":              "Vörur",
 		"Name":                      "Nafn",
 		"Category":				   	 "Flokkur",
+		"Price":					 "Verð",
 		"ImagePath":				 "Myndaslóð",
 		"AddIndividual":             "Bæta við seljanda",
 		"Edit":						 "Breyta",

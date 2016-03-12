@@ -7,6 +7,7 @@ $scope.onAddProduct = function onAddProduct() {
 	ProductDlg.show().then(function(product) {
 		AppResource.addSellerProduct(parseInt($scope.sellerID), product).success(function(productInfo) {
 			var newProduct = product;
+			 $scope.products.push(newProduct);
 		}).error(function() {
 			centrisNotify.error('sellers.Messages.SaveFailed');
 		});

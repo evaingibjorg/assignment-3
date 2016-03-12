@@ -17,12 +17,12 @@ function SellerDlgController($scope, centrisNotify, modalParam) {
       
   };
 
-  var modalObj = modalParam.seller;
-        if(modalObj !== undefined) {
+  var sellerObj = modalParam.seller;
+        if(sellerObj !== undefined) {
             $scope.seller = {
-                name: modalObj.name,
-                category: modalObj.category,
-                imagePath: modalObj.imagePath
+                name: sellerObj.name,
+                category: sellerObj.category,
+                imagePath: sellerObj.imagePath
             };
         } else {
             $scope.seller = {

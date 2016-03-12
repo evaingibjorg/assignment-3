@@ -1,25 +1,24 @@
-<div class="modal-header">
-            <h3 class="modal-title" translate="productDlg.Title"></h3>
-        </div>
+<!-- Code origin from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
 
-        <div class="modal-body">
-            <form>
-                <div>
-                    <label translate="productDlg.Name"></label>
-                    <input type="text" ng-model="productInfo.name">
-                </div>
-                <div>
-                    <label translate="productDlg.Price"></label>
-                    <input type="text" ng-model="productInfo.price">
-                </div>
-                <div>
-                    <label translate="productDlg.ImageUrl"></label>
-                    <input type="text" ng-model="productInfo.imagePath">
-                </div>
-            </form>
+       <!-- Modal content -->
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="onCancel()">&times;</button>
+        <h4 class="modal-title" translate="sellers.TitleProduct"></h4>
+    </div>
+    <div class="modal-body">
+        <div>
+            <label translate="sellers.Name"></label>
+            <input type="text" class="form-control" ng-model="productInfo.name" ng-required="required"/>
         </div>
-
+        <div>
+             <label translate="sellers.Price"></label>
+            <input type="text" class="form-control" ng-model="productInfo.price" ng-required="required"/>
+        </div>
+        <div> 
+             <label translate="sellers.ImagePath"></label>
+            <input type="url" class="form-control" ng-model="productInfo.imagePath" ng-required="required"/>
+        </div>
+        </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="submit" ng-click="onOk(productInfo)" translate="productDlg.OkButton"></button>
-            <button class="btn btn-danger" type="button" ng-click="onCancel()" translate="productDlg.CancelButton"></button>
+          <button class="btn btn-default" type="submit" ng-click="onOk(productInfo)" translate="sellers.Submit"></button> 
         </div>

@@ -1,8 +1,10 @@
 {
 	"sellers" : {
 		"Title":                     "Sellers",
+		"TitleProduct":              "Products",
 		"Name":                      "Name",
 		"Category":					 "Category",
+		"Price":					 "Price",
 		"ImagePath":				 "Image Url",
 		"AddIndividual":             "Add Seller",
 		"Edit":						 "Edit",
