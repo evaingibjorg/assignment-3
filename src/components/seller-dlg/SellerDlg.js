@@ -8,8 +8,12 @@ function SellerDlg($uibModal) {
             templateUrl: "components/seller-dlg/seller-dlg.html",
             controller: "SellerDlgController",
             resolve: {
+                modalParam: function() {
+                    return {
     	        seller: seller
-    	      }
+    	      };
+            }
+         }
         });
 
         return modalInstance.result;

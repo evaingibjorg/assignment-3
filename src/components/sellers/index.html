@@ -3,37 +3,36 @@
 	  		<loading-message></loading-message>
 	</div>
 	<div id="header">
-  		<h2 translate = "sellers.Title"></h2>
+  		<h2 translate="sellers.Title"></h2>
   	</div>
 
-  <div id="right">
-  		<div class="ModalButton">
+	<div id="section">       
+		<div class="ModalButton">
 			<!-- Trigger the modal with a button --> 
 			<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
-			<button type="button" class="btn btn-default" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal" translate = "sellers.AddIndividual">Bæta við seljanda</button>
+			<button type="button" class="btn btn-default" ng-click="onAddSeller()" data-toggle="modal" data-target="#myModal" translate = "sellers.AddIndividual">Bæta við seljanda</button>
 		</div>
+                                                    
+		  <div class="table-responsive">          
+		  <table class="table">
+		    <thead>
+		      <tr>
+		        <th translate="sellers.Name">Name</th>
+		        <th translate="sellers.Category">Category</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="seller in sellerInfo">
+		      	<td>
+		      		<button type="button" class="btn btn-default" ng-click="onEditSeller(seller)" data-toggle="modal" data-target="#myModal" translate="sellers.Edit">Breyta</button>
+		      	</td>
+		        <td> 
+		        	<a href ng-click="enterSeller(seller.id)" ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a>
+		        </td>
+		        <td>
+		        	<a href ng-click="enterCategory()"> {{seller.category}} </a>
+		        </td>
+		      </tr>
+		    </tbody>
+		  </table>
 	</div>
-
-	<div id="section">
-
-	<div id="nav">
-		<div class="SellerName" translate="sellers.Name">
-		</div>
-		<div class="SellerCategory" translate="sellers.Category">
-		</div>	
-	</div>
-
-		<ul class="Sellers">
-			<li ng-repeat="seller in sellerInfo">
-				<button type="button" class="btn btn-default" ng-click="editSeller(seller)" data-toggle="modal" data-target="#myModal" translate="sellers.Edit">Breyta</button>
-				<a href ng-click="enterSeller(seller.id)" ng-href="#/seller/{{seller.id}}"> {{seller.name}} </a>
-			</li>
-		</ul>
-
-		<ul class="Category">
-			<li ng-repeat="seller in sellerInfo">
-				<a href ng-click="enterCategory()"> {{seller.category}} </a>
-			</li>
-		</ul>
-	</div>
- 

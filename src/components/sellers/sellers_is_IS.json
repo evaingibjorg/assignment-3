@@ -3,8 +3,10 @@
 		"Title":                     "Seljendur",
 		"Name":                      "Nafn",
 		"Category":				   	 "Flokkur",
+		"ImagePath":				 "Myndaslóð",
 		"AddIndividual":             "Bæta við seljanda",
 		"Edit":						 "Breyta",
+		"Submit":					 "Bæta við",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
