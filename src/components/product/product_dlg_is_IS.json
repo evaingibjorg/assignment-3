@@ -1,0 +1,16 @@
+{
+	"product" : {
+		"TitleProduct":              "Vara",
+		"Name":                      "Nafn",
+		"Price":					 "Verð",
+		"ImagePath":				 "Myndaslóð",
+		"QuantityInStock":			 "Magn á lager",
+		"QuantitySold":              "Selt magn",
+		"Submit":					 "Staðfesta",
+		"Messages" : {
+			"LoadFailed":            "Failed to load the list of sellers",
+			"SaveSucceeded":         "The seller has been added successfully",
+			"SaveFailed":            "Unfortunately we could not add a new seller"
+		}
+	}
+}

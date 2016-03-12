@@ -1,0 +1,16 @@
+{
+	"product" : {
+		"TitleProduct":              "Product",
+		"Name":                      "Name",
+		"Price":					 "Price",
+		"ImagePath":				 "Image Path",
+		"QuantityInStock":			 "Quantity In Stock",
+		"QuantitySold":              "Quantity Sold",
+		"Submit":					 "Submit",
+		"Messages" : {
+			"LoadFailed":            "Failed to load the list of sellers",
+			"SaveSucceeded":         "The seller has been added successfully",
+			"SaveFailed":            "Unfortunately we could not add a new seller"
+		}
+	}
+}

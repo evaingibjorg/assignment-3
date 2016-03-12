@@ -22,12 +22,16 @@ function ProductDlgController($scope, centrisNotify, modalParam) {
             $scope.product = {
                 name: productObj.name,
                 price: productObj.price,
+                quantityInStock: productObj.quantityInStock,
+                quantitySold: productObj.quantitySold,
                 imagePath: productObj.imagePath
             };
         } else {
             $scope.product = {
                 name: "",
                 price: "",
+                quantityInStock: "",
+                quantitySold: "",
                 imagePath: ""
             };
         }
