@@ -28,7 +28,10 @@
 	<div class="tab-content responsive">
 	  <div class="tab-pane active" id="home" ng-repeat="products in products">
 	      <a href ng-click="enterProduct(product.id)" ng-href="#/product/{{product.id}}">{{products.name}}</a>
-	            {{products.price}}
+	            {{products.price}} ISK
+	            {{products.quantitySold}}
+                {{products.quantityInStock}}
+	            <img class="ProductPhoto" ng-src="{{products.imagePath}}"/>
 	   </div>
 	  <div class="tab-pane" id="profile">...content...</div>
 	  <div class="tab-pane" id="messages">...content...</div>
