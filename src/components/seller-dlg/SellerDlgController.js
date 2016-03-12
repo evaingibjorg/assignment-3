@@ -10,7 +10,7 @@ function SellerDlgController($scope, centrisNotify, modalParam) {
   $scope.onOk = function onOk(sellerInfo) {
       console.log(sellerInfo);
       if(sellerInfo.name.length === 0 || sellerInfo.category.length === 0 || sellerInfo.imagePath.length === 0) {
-        centrisNotify.error("");
+        centrisNotify.error("sellers.Messages.InputFail");
         return;
       }
       $scope.$close(sellerInfo);

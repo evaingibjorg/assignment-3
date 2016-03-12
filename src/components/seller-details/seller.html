@@ -1,24 +1,10 @@
 <div ng-include="'src/components/translate/languageBar.html'"></div>
-	<div id="header">
-		<div class="SellerPhoto" translate="sellerdetails.Photo">
-		</div>
-		<div class="SellerName" translate="sellerdetails.Name">
-		</div>
+	<div class="SellerName">
 			{{seller.name}}
-			<img ng-src="{{seller.imagePath}}"/>
-		<div class="SellerCategory" translate="sellerdetails.Category">
-		</div>
 	</div>
-
-	<div id="right">
-  		<div class="ModalButton">
-		<!-- Trigger the modal with a button --> 
-		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
-		<button type="button" class="btn btn-default" ng-click="addSellerModal()" data-toggle="modal" data-target="#myModal" translate = "sellerdetails.AddProduct"></button>
-		</div>
-
+	<div class="SellerPhoto">
+		<img ng-src="{{seller.imagePath}}"/>
 	</div>
-	
 
 	<!--<div id="section">
 		<div class="AllProducts" translate="sellerdetails.AllProducts">
@@ -27,29 +13,27 @@
 		</div>
 	</div>
  </div>-->
+<div id="section">  
+		<div class="ModalButton">
+		<!-- Trigger the modal with a button --> 
+		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+		<button type="button" class="btn btn-default" ng-click="onAddProduct()" data-toggle="modal" data-target="#myModal" translate = "sellerdetails.AddProduct">Bæta við vöru</button>
+		</div>
 
+	 <ul class="nav nav-tabs responsive" id="myTab">
+	  <li class="active"><a data-toggle="tab">Allar vörur</a></li>
+	  <li><a data-toggle="tab">Topp tíu</a></li>
+	</ul>
 
-<!--https://github.com/angular-ui/bootstrap/blob/master/src/tabs/docs/demo.html-->
-<form name="outerForm" class="tab-form-demo">
-    <uib-tabset active="activeForm">
-      
-      <uib-tab index="0" heading="Allar vörur">
-        <ng-form name="nestedForm">
-          <div class="form-group">
-           
-          </div>
-        </ng-form>
-      </uib-tab>
+	<div class="tab-content responsive">
+	  <div class="tab-pane active" id="home" ng-repeat="products in products">
+	      <a href ng-click="enterProduct(product.id)" ng-href="#/product/{{product.id}}">{{products.name}}</a>
+	            {{products.price}}
+	   </div>
+	  <div class="tab-pane" id="profile">...content...</div>
+	  <div class="tab-pane" id="messages">...content...</div>
+	</div>
 
-      <uib-tab index="1" heading="Topp tíu">
-      	<ng-form name="nestedForm">
-          <div class="form-group">
-           
-          </div>
-        </ng-form>
-      </uib-tab>
-  
-    </uib-tabset>
-</form>
+	<button type="button" class="btn btn-default" ng-click="back()" translate="sellerdetails.Back">Til baka</button>
 
-<button type="button" class="btn btn-default" ng-click="back()" translate="sellerdetails.Back">Til baka</button>
+</div>
