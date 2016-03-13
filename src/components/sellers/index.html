@@ -1,39 +1,37 @@
 <div ng-include="'src/components/translate/languageBar.html'"></div>
-	<div ng-show="isLoading">
-	  		<loading-message></loading-message>
+<div ng-show="isLoading">
+  	<loading-message></loading-message>
+</div>
+<div id="header">
+	<h2 translate="sellers.Title"></h2>
+</div>
+<div id="section">       
+	<div class="ModalButton">
+		<!-- Trigger the modal with a button --> 
+		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
+		<button type="button" class="btn btn-default" ng-click="onAddSeller()" data-toggle="modal" data-target="#myModal" translate = "sellers.AddIndividual">Add Individual</button>
 	</div>
-	<div id="header">
-  		<h2 translate="sellers.Title"></h2>
-  	</div>
-
-	<div id="section">       
-		<div class="ModalButton">
-			<!-- Trigger the modal with a button --> 
-			<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
-			<button type="button" class="btn btn-default" ng-click="onAddSeller()" data-toggle="modal" data-target="#myModal" translate = "sellers.AddIndividual">Bæta við seljanda</button>
-		</div>
-                                                    
-		  <div class="table-responsive">          
-		  <table class="table">
-			 <thead>
-		      <tr table-sort="-Name">
-		        <th data-columnName="Name" translate="sellers.Name">Name</th>
-		        <th data-columnName="Category" translate="sellers.Category">Category</th>
-		      </tr>
-		    </thead>
-
-		    <tbody>
-		    	<tr ng-repeat="seller in sellerInfo | orderBy:predicate:reverse">
-		      	<td>
-		      		<button type="button" class="btn btn-default" ng-click="onEditSeller(seller)" data-toggle="modal" data-target="#myModal" translate="sellers.Edit">Breyta</button>
-		      	</td>
-		        <td> 
-		        	<a href ng-click="enterSeller(seller.id)" ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a>
-		        </td>
-		        <td>
-		        	<a href ng-click="enterCategory()"> {{seller.category}} </a>
-		        </td>
-		      </tr>
-		    </tbody>
-		  </table>
-	</div>
+                                                
+	<div class="table-responsive">          
+	<table class="table">
+		<thead>
+	    	<tr>
+	        	<th data-columnName="Name" translate="sellers.Name">Name</th>
+	       		<th data-columnName="Category" translate="sellers.Category">Category</th>
+	      	</tr>
+	    </thead>
+	    <tbody>
+	    	<tr ng-repeat="seller in sellerInfo | orderBy:predicate:reverse">
+	      		<td>
+	      			<button type="button" class="btn btn-default" ng-click="onEditSeller(seller)" data-toggle="modal" data-target="#myModal" translate="sellers.Edit">Edit</button>
+	      		</td>
+	        	<td> 
+	        		<a href ng-click="enterSeller(seller.id)" ng-href="#/seller/{{seller.id}}">{{seller.name}}</a>
+	        	</td>
+	        	<td>
+	        		<a href ng-click="enterCategory()">{{seller.category}}</a>
+	        	</td>
+	     	</tr>
+	    </tbody>
+	</table>
+</div>

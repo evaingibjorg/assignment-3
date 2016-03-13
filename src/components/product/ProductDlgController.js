@@ -30,8 +30,8 @@ function ProductDlgController($scope, AppResource, $routeParams, $uibModal, moda
             $scope.product = {
                 name: "",
                 price: "",
-                quantitySold: "",
-                quantityInStock: "",
+                quantitySold: "0",
+                quantityInStock: "0",
                 imagePath: ""
             };
         }
