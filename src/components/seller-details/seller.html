@@ -1,21 +1,15 @@
 <div ng-include="'src/components/translate/languageBar.html'"></div>
+<div>
 	<div class="SellerName">
 			{{seller.name}}
 	</div>
-	<img class="SellerPhoto" ng-src="{{seller.imagePath}}"/>
+	<img class="img-rounded" ng-src="{{seller.imagePath}}"/>
 
-	<!--<div id="section">
-		<div class="AllProducts" translate="sellerdetails.AllProducts">
-		</div>
-		<div class="TopTen" translate="sellerdetails.TopTen">
-		</div>
-	</div>
- </div>-->
 <div id="section">  
 		<div class="ModalButton">
 		<!-- Trigger the modal with a button --> 
 		<!-- Code from http://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
-		<button type="button" class="btn btn-default" ng-click="onAddProduct()" data-toggle="modal" data-target="#myModal" translate = "sellerdetails.AddProduct">Bæta við vöru</button>
+		<button type="button" class="btn btn-primary" ng-click="onAddProduct()" data-toggle="modal" data-target="#myModal" translate = "sellerdetails.AddProduct">Bæta við vöru</button>
 </div>
 <!--https://github.com/angular-ui/bootstrap/tree/master/src/tabs-->
 <div> 
@@ -24,24 +18,49 @@
 		      <uib-tab index="0" heading="Allar Vörur">
 		      <ng-form name="nestedForm">
 		          <div class="form-group"ng-repeat="products in products">
-		    					<img class="ProductPhoto" ng-src="{{products.imagePath}}"/>
-		    					{{products.name}}
-		    					{{products.price}} ISK
-		          </div>
+		             	<ul class="widget-products">
+	                  	<li>
+	                     <span class="img">
+	                     <img class="img-thumbnail" ng-src="{{products.imagePath}}">
+	                     </span>
+	                     <span class="product clearfix">
+	                     <span class="name">
+	                     {{products.name}}
+	                     </span>
+	                     <span class="price">
+	                     <i class="fa fa-money"></i> {{products.price}} ISK
+	                     </span>
+	                     </span>
+	                  	</li>
+	            		</ul>
+	            	</div>
 		        </ng-form>
 		      </uib-tab>
-		      <uib-tab index="1" heading="Topp 10">
-		        <ng-form name="nestedForm">
+		      <uib-tab index="1" heading= "Topp 10">
+		      <ng-form name="nestedForm">
 		          <div class="form-group" class= "col-md-3" ng-repeat="products in topProducts">
-		    					<img class="ProductPhoto" ng-src="{{products.imagePath}}"/>
-		    					{{products.name}}
-		    					{{products.price}} ISK
-		          </div>
+	               	<ul class="widget-products">
+	                  <li>
+	                     <span class="img">
+	                     <img class="img-thumbnail" ng-src="{{products.imagePath}}">
+	                     </span>
+	                     <span class="product clearfix">
+	                     <span class="name">
+	                     {{products.name}}
+	                     </span>
+	                     <span class="price">
+	                     <i class="fa fa-money"></i> {{products.price}} ISK
+	                     </span>
+	                     </span>
+	                  </li>
+	            	</ul>
+	            	</div>
 		      </form>
 		      </uib-tab>
 		    </uib-tabset>
-  		</form>
+  			</form>
+					
 </div>
-<button type="button" class="btn btn-default" ng-click="back()" translate="sellerdetails.Back">Til baka</button>
 
+<button type="button" class="btn btn-default" ng-click="back()" translate="sellerdetails.Back">Til baka</button>
 </div>

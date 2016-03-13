@@ -14,7 +14,7 @@ $scope.onAddProduct = function onAddProduct() {
 	});
 };	
 
- $scope.sellerID = $routeParams.sellerID ;
+ $scope.sellerID = $routeParams.sellerID;
  console.log($scope.sellerID);
   AppResource.getSellerDetails(parseInt($scope.sellerID)).success(function(sellers) {
     $scope.seller = sellers;
@@ -29,7 +29,7 @@ $scope.onAddProduct = function onAddProduct() {
   });
 
 topTenProductSold = _.sortBy(topTenProductSold, "quantitySold");
-$scope.topProducts = _.take(topTenProductSold, 10);
+$scope.topProducts = topTenProductSold.slice(0, 9);
 
   $scope.back = function back(){
 		$location.path("/");

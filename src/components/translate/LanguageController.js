@@ -5,4 +5,6 @@ angular.module("project3App").controller("LanguageController",
 		$scope.translateText = function(key) {
 		$translate.use(key);
 	};
+
+
 });

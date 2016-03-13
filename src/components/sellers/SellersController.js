@@ -17,14 +17,12 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 	};
 
 
-	$scope.isLoading = true;
+	//$scope.isLoading = true;
 	var gettingSellers = AppResource.getSellers();
 	gettingSellers.success(function (sellerInfo) {
 		$scope.sellerInfo = sellerInfo;
-		$scope.isLoading = false;
 	console.log($scope.sellerInfo);
 	}).error(function(){
-		$scope.isLoading = false;
 		centrisNotify.error('sellers.Messages.LoadFailed');
 	});
 

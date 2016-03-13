@@ -1,14 +1,12 @@
-@color_1: white;
 
-.ModalButton {
+.ModalButton{
 	font-size: 18px;
 	border: none;
-	color: @color_1;
 	float: right;
+	padding-right: 0%;
 }
-#header {
-	padding: 0;
-	float: left;
+#header{
+	padding-bottom: 30px;
 }
 
 #section {
@@ -16,12 +14,79 @@
 	float: left;
 }
 
-.SellerPhoto{
+.table{
+	font-size: 1.125em;
+	font-weight: 300;
+}
+
+.SellerName{
+	padding-bottom: 10px;
+	font-size: 1.125em;
+	font-weight: 300;
+}
+
+.img-rounded{
 	max-width: 200px;
 	max-height: 400px;
+	padding-bottom: 20px;
  }
 
- .ProductPhoto{
- 	max-width: 100px;
-	max-height: 100px;
- }
+// Color variables (appears count calculates by raw css)
+@color1: #ebebeb; // Appears 3 times
+@color2: #2ecc71; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width3: 50%; // Appears 2 times
+
+
+.widget-products {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		border-bottom: 1px solid @color1;
+		.product>.warranty>i {
+			color: #f1c40f;
+		}
+		.product>.price>i {
+			color: @color2;
+		}
+		.product>.price {
+			display: block;
+			float: left;
+			font-size: 0.875em;
+			text-decoration: none;
+			width: @width3;
+		}
+		.product>.name {
+			display: block;
+			font-weight: 600;
+			padding-bottom: 7px;
+		}
+		.product {
+			display: block;
+			margin-left: 90px;
+			margin-top: 19px;
+		}
+		.img {
+			display: block;
+			float: left;
+			height: 100px;
+			margin-top: 7px;
+			margin-bottom: 0px;
+			overflow: hidden;
+			text-align: center;
+			width: 70px;
+		}
+	}
+}
+
+.nav-tabs>li>a {
+	border-radius: 0;
+	color: #555555;
+	font-size: 1.125em;
+	font-weight: 300;
+	margin-right: 3px;
+	outline: none;
+}
+
