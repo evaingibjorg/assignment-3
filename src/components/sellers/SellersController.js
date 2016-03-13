@@ -10,6 +10,7 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 			SellerDlg.show().then(function(seller) {
 				AppResource.addSeller(seller).success(function(sellerInfo) {
 					var newSeller = seller;
+					//centrisNotify.success("sellers.Messages.SaveSucceeded");
 				}).error(function() {
 					centrisNotify.error('sellers.Messages.SaveFailed');
 			});
@@ -36,7 +37,7 @@ function SellersController($scope, AppResource, $routeParams, $uibModal, $locati
 			AppResource.updateSeller(sellerInfo.id, seller).success(function(seller){
 					centrisNotify.success("sellers.Messages.SaveSucceeded");
 			}).error(function() {
-					centrisNotify.error("sellers.Messages.SaveFailed");
+					centrisNotify.error("sellers.Messages.EditFailed");
 			});
 		});
 	};
