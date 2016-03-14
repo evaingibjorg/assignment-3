@@ -14,6 +14,17 @@ $scope.onAddProduct = function onAddProduct() {
 	});
 };	
 
+$scope.editProduct = function editProduct(productInfo) {
+	console.log(productInfo);
+    ProductDlg.show(productInfo).then(function(product) {
+			AppResource.updateProduct(parseInt(productInfo.id), product).success(function(product) {
+					//centrisNotify.success('product.Messages.EditSucceeded');
+			}).error(function() {
+					//centrisNotify.success('product.Messages.EditFailed');
+			});
+		});
+	};
+
  $scope.sellerID = $routeParams.sellerID;
  console.log($scope.sellerID);
   AppResource.getSellerDetails(parseInt($scope.sellerID)).success(function(sellers) {

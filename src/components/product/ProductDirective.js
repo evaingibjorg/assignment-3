@@ -5,7 +5,7 @@ function tab() {
   return {
     restrict: "E",
     transclude: true,
-    templateUrl: "src/components/product/product.html",
+    templateUrl: "src/components/seller-details/seller.html",
     controller: "ProductController"
   };
 });
