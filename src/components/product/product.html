@@ -1,0 +1,12 @@
+<!--TODO: add a directive which displays a single product!-->
+
+<div ng-controller="ProductController">
+        <div class="ProductPhoto">
+			<img ng-src="{{product.imagePath}}"/>
+		</div>
+       <!-- <h2>{{product.name}}</h2>-->
+        <h4>{{product.price}} </h4>
+        <h4>{{product.quantitySold}}</h4>
+ 
+        <button type="button" ng-click="editProduct(product)"></button>
+</div>
